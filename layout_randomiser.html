@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="Anna Duras">
+  <meta name="description" content="Random Generator Template">
+  <title>Random Generator</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <style>
+    #output {
+      margin: 2em 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   <nav class="settings">
+      <a href="index.html">BACK</a>
+    </nav>
+    <div class="hgroup">
+      <h1>Random Generator</h1>
+      <p>Generator layout</p>
+    </div>
+    <hr>
+  </header>
+
+  <main class="pagecontent">
+    <button onclick="generate()">Generate</button>
+    <div id="output">Press the button!</div>
+  </main>
+
+  <footer>
+    <p><strong>Random Generator</strong> by <strong>Anna Duras</strong>.<br>All Rights Reserved&#174;</p>
+  </footer>
+
+  <script>
+    const items = [
+      "Stay curious.",
+      "Design with purpose.",
+      "Simplicity is power.",
+      "Code. Test. Refine.",
+      "Make something beautiful today."
+    ];
+    function generate() {
+      const random = items[Math.floor(Math.random() * items.length)];
+      document.getElementById('output').textContent = random;
+    }
+  </script>
+</body>
+</html>
