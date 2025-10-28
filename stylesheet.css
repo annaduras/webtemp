@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Share+Tech+Mono&family=Silkscreen&display=swap');
+
+html,body {
+  height:100%;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-size:min(max(1rem,4vw),20px);
+}
+
+body {
+  font-family:'IBM Plex Mono',monospace,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  line-height:1.6;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+main { flex-grow:1; }
+
+.grid {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1em 2em;
+}
+
+@media (min-width:768px) {
+  .grid { grid-template-columns:repeat(auto-fit,minmax(0,1fr)); }
+}
+
+input,button,select,textarea {
+  margin:0;
+  font:inherit;
+  line-height:inherit;
+}
+
+.settings {
+  text-align:right;
+  margin:2%;
+}
+
+.settings a {
+  text-decoration:none;
+  padding:.3em;
+}
+
+.hgroup {
+  text-align:center;
+  padding:1em 0 5em;
+}
+
+.pagecontent { padding:10%; }
+
+footer {
+  padding:5%;
+  font-size:90%;
+  text-align:center;
+  width:90%;
+  margin:0 auto;
+}
+
+#pagelinks a{
+  padding-left: 2%;
+}
